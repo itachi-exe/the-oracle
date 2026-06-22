@@ -51,23 +51,25 @@ export function SettingsPage() {
   const avatar = profile.data.avatar;
 
   return (
-    <div className="flex flex-col gap-[22px] p-7" style={{ maxWidth: 520 }}>
-      <div className="flex items-center gap-[18px]">
+    <div className="flex flex-col gap-[22px] p-4 sm:p-7" style={{ maxWidth: 520 }}>
+      <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-[18px]">
         <IdentityAvatar seed={address} size={64} src={avatar} />
         <div>
-          <label className="inline-block cursor-pointer rounded-md bg-primary px-4 py-2 text-[13px] font-medium text-primary-foreground">
-            Upload avatar
-            <input type="file" accept="image/*" onChange={handleFile} className="hidden" />
-          </label>
-          {avatar && (
-            <button
-              type="button"
-              onClick={handleRemoveAvatar}
-              className="ml-2.5 inline-block cursor-pointer rounded-md border border-line-7 px-4 py-2 text-[13px] text-danger"
-            >
-              Remove avatar
-            </button>
-          )}
+          <div className="flex flex-wrap gap-2">
+            <label className="inline-block cursor-pointer rounded-md bg-primary px-4 py-2 text-[13px] font-medium text-primary-foreground">
+              Upload avatar
+              <input type="file" accept="image/*" onChange={handleFile} className="hidden" />
+            </label>
+            {avatar && (
+              <button
+                type="button"
+                onClick={handleRemoveAvatar}
+                className="inline-block cursor-pointer rounded-md border border-line-7 px-4 py-2 text-[13px] text-danger"
+              >
+                Remove avatar
+              </button>
+            )}
+          </div>
           <div className="mt-2 text-xs text-ink-7">PNG or JPG. Replaces your generated avatar everywhere.</div>
         </div>
       </div>

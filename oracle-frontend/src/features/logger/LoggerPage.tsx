@@ -34,8 +34,8 @@ export function LoggerPage() {
   }
 
   return (
-    <div className="p-7">
-      <div className="mb-[22px] flex gap-2">
+    <div className="p-4 sm:p-7">
+      <div className="mb-[18px] flex gap-2 overflow-x-auto sm:mb-[22px]">
         {filters.map((f) => (
           <button
             key={f}

@@ -9,15 +9,15 @@ const checks = [
 
 export function VerifiedSection() {
   return (
-    <section className="mx-auto grid max-w-[1180px] grid-cols-1 gap-16 px-6 pt-[130px] md:grid-cols-2 md:items-center">
+    <section className="mx-auto grid max-w-[1180px] grid-cols-1 gap-10 px-4 pt-[80px] sm:gap-16 sm:px-6 sm:pt-[130px] md:grid-cols-2 md:items-center">
       <div>
         <div className="mb-6.5 flex size-14 items-center justify-center rounded-2xl border border-line-5 bg-panel-2 text-ink-6">
           <ShieldCheck className="size-[26px]" aria-hidden="true" />
         </div>
-        <h2 className="m-0 mb-4 text-[36px] font-normal leading-[1.12] tracking-[-0.03em] text-ink-1">
+        <h2 className="m-0 mb-4 text-[26px] font-normal leading-[1.18] tracking-[-0.02em] text-ink-1 sm:text-[36px] sm:leading-[1.12] sm:tracking-[-0.03em]">
           Verifiable on 0G, by design
         </h2>
-        <p className="m-0 mb-8 text-base leading-[1.55] text-ink-5">
+        <p className="m-0 mb-8 text-[15px] leading-[1.55] text-ink-5 sm:text-base">
           Every layer is load-bearing. Nothing about the Oracle asks you to trust a server; the whole stack proves
           itself.
         </p>

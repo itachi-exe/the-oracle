@@ -8,9 +8,9 @@ const resolves = [
 
 export function LockResolveCards() {
   return (
-    <section className="mx-auto grid max-w-[1180px] grid-cols-1 gap-6 px-6 pt-[90px] md:grid-cols-2">
-      <div className="flex flex-col rounded-xl border border-line-3 bg-panel p-[30px]">
-        <h3 className="m-0 mb-2.5 text-[26px] font-normal tracking-[-0.02em] text-ink-1">Lock it on-chain</h3>
+    <section className="mx-auto grid max-w-[1180px] grid-cols-1 gap-6 px-4 pt-[60px] sm:px-6 sm:pt-[90px] md:grid-cols-2">
+      <div className="flex flex-col rounded-xl border border-line-3 bg-panel p-5 sm:p-[30px]">
+        <h3 className="m-0 mb-2.5 text-[22px] font-normal tracking-[-0.02em] text-ink-1 sm:text-[26px]">Lock it on-chain</h3>
         <p className="m-0 mb-7 text-[15px] leading-[1.5] text-ink-5">
           Your address, the market, your call, and the block timestamp, recorded on 0G Chain. Immutable, forever.
         </p>
@@ -41,8 +41,8 @@ export function LockResolveCards() {
         </div>
       </div>
 
-      <div className="flex flex-col rounded-xl border border-line-3 bg-panel p-[30px]">
-        <h3 className="m-0 mb-2.5 text-[26px] font-normal tracking-[-0.02em] text-ink-1">Resolves itself</h3>
+      <div className="flex flex-col rounded-xl border border-line-3 bg-panel p-5 sm:p-[30px]">
+        <h3 className="m-0 mb-2.5 text-[22px] font-normal tracking-[-0.02em] text-ink-1 sm:text-[26px]">Resolves itself</h3>
         <p className="m-0 mb-7 text-[15px] leading-[1.5] text-ink-5">
           When a market settles, contracts read the outcome and update accuracy and rank automatically. No admin.
         </p>

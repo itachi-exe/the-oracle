@@ -56,16 +56,16 @@ function Row({ items, duration, reverse }: { items: typeof rowA; duration: strin
 
 export function MarketsMarquee() {
   return (
-    <section className="overflow-hidden pt-[130px]">
+    <section className="overflow-hidden pt-[80px] sm:pt-[130px]">
       <style>{`
         @keyframes or-marquee-l { from { transform: translateX(0); } to { transform: translateX(-33.333%); } }
         @keyframes or-marquee-r { from { transform: translateX(-33.333%); } to { transform: translateX(0); } }
       `}</style>
-      <div className="mx-auto max-w-[1180px] px-6 pb-11 text-center">
-        <h2 className="m-0 mb-3.5 text-[36px] font-normal leading-[1.12] tracking-[-0.03em] text-ink-1">
+      <div className="mx-auto max-w-[1180px] px-4 pb-8 text-center sm:px-6 sm:pb-11">
+        <h2 className="m-0 mb-3.5 text-[26px] font-normal leading-[1.18] tracking-[-0.02em] text-ink-1 sm:text-[36px] sm:leading-[1.12] sm:tracking-[-0.03em]">
           Call it across everything you follow
         </h2>
-        <p className="mx-auto m-0 max-w-[520px] text-base leading-[1.5] text-ink-5">
+        <p className="mx-auto m-0 max-w-[520px] text-[14px] leading-[1.5] text-ink-5 sm:text-base">
           Sports, crypto, and culture · live markets, settled trustlessly.
         </p>
       </div>

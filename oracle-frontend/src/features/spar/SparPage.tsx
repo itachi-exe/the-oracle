@@ -203,7 +203,7 @@ export function SparPage() {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="mx-auto flex w-full max-w-[760px] flex-1 flex-col gap-[18px] overflow-y-auto px-7 py-6">
+      <div className="mx-auto flex w-full max-w-[760px] flex-1 flex-col gap-[18px] overflow-y-auto px-4 py-5 sm:px-7 sm:py-6">
         {!hasStarted && (
           <div className="flex flex-1 flex-col items-center justify-center gap-3 text-center">
             <img src="/oracle-logo.png" alt="" className="size-11 object-contain" />
@@ -338,7 +338,7 @@ export function SparPage() {
       </div>
 
       {(!hasStarted || !marketId) && (
-        <div className="px-7 pb-[22px] pt-4">
+        <div className="px-4 pb-[18px] pt-4 sm:px-7 sm:pb-[22px]">
           <div className="mx-auto flex max-w-[760px] items-center gap-2.5 rounded-[10px] border border-line-5 bg-panel-2 py-2 pl-4 pr-2">
             <input
               value={draft}

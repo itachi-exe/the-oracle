@@ -9,7 +9,7 @@ const columns = [
 export function Footer() {
   return (
     <footer className="border-t border-line-2">
-      <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 sm:py-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <div className="mb-4.5 flex items-center gap-2.5">
             <img src="/oracle-logo.png" alt="" className="size-7 object-contain" />
@@ -47,15 +47,15 @@ export function Footer() {
         ))}
       </div>
       <div className="border-t border-line-2">
-        <div className="mx-auto flex max-w-[1180px] items-center justify-between px-6 py-5">
-          <span className="font-mono text-[12.5px] text-ink-7">© 2026 The Oracle. Built on 0G.</span>
+        <div className="mx-auto flex max-w-[1180px] flex-col items-start gap-2 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <span className="font-mono text-[11.5px] text-ink-7 sm:text-[12.5px]">© 2026 The Oracle. Built on 0G.</span>
           <div className="flex items-center gap-2">
             <span className="size-[7px] animate-pulse rounded-full bg-success-dim" />
-            <span className="font-mono text-[12.5px] text-ink-6">0G Chain · operational</span>
+            <span className="font-mono text-[11.5px] text-ink-6 sm:text-[12.5px]">0G Chain · operational</span>
           </div>
         </div>
       </div>
-      <div className="select-none overflow-hidden py-10 text-center text-[13vw] font-medium leading-none tracking-[-0.04em] text-[#101018]">
+      <div className="select-none overflow-hidden py-10 text-center text-[15vw] font-medium leading-none tracking-[-0.04em] text-[#101018] sm:text-[13vw]">
         THE ORACLE
       </div>
     </footer>

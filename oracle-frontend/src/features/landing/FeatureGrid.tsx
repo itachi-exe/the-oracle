@@ -13,11 +13,11 @@ const features = [
 
 export function FeatureGrid() {
   return (
-    <section id="product" className="mx-auto max-w-[1180px] scroll-mt-[110px] px-6 pt-[130px]">
-      <h2 className="m-0 mb-3.5 max-w-[640px] text-[40px] font-normal leading-[1.1] tracking-[-0.03em] text-ink-1">
+    <section id="product" className="mx-auto max-w-[1180px] scroll-mt-[110px] px-4 pt-[80px] sm:px-6 sm:pt-[130px]">
+      <h2 className="m-0 mb-3.5 max-w-[640px] text-[28px] font-normal leading-[1.15] tracking-[-0.02em] text-ink-1 sm:text-[40px] sm:leading-[1.1] sm:tracking-[-0.03em]">
         Everything you need to own a sharper agent
       </h2>
-      <p className="m-0 mb-11 max-w-[560px] text-[17px] leading-[1.5] text-ink-5">
+      <p className="m-0 mb-8 max-w-[560px] text-[15px] leading-[1.5] text-ink-5 sm:mb-11 sm:text-[17px]">
         One agent that's actually yours: sparring, memory, on-chain proof, and one shared score.
       </p>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

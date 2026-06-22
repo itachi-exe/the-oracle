@@ -7,12 +7,12 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="mx-auto max-w-[1180px] scroll-mt-[110px] px-6 pt-[130px]">
+    <section id="how-it-works" className="mx-auto max-w-[1180px] scroll-mt-[110px] px-4 pt-[80px] sm:px-6 sm:pt-[130px]">
       <div className="mb-5 font-mono text-xs uppercase tracking-[0.12em] text-ink-7">How it works</div>
-      <h2 className="m-0 mb-3.5 max-w-[680px] text-[40px] font-normal leading-[1.1] tracking-[-0.03em] text-ink-1">
+      <h2 className="m-0 mb-3.5 max-w-[680px] text-[28px] font-normal leading-[1.15] tracking-[-0.02em] text-ink-1 sm:text-[40px] sm:leading-[1.1] sm:tracking-[-0.03em]">
         From disagreement to on-chain record
       </h2>
-      <p className="m-0 mb-14 max-w-[560px] text-[17px] leading-[1.5] text-ink-5">
+      <p className="m-0 mb-10 max-w-[560px] text-[15px] leading-[1.5] text-ink-5 sm:mb-14 sm:text-[17px]">
         Four steps, no capital. Connect, spar, lock, then let the chain keep score.
       </p>
       <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">

@@ -22,7 +22,7 @@ export function Layout() {
     <div className="flex h-screen flex-col overflow-hidden bg-app-canvas font-sans text-ink-1 antialiased">
       <AppNavBar />
       <NetworkGuard />
-      <div className="min-h-0 flex-1 overflow-y-auto">
+      <div className="min-h-0 flex-1 overflow-y-auto pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">
         <Outlet />
       </div>
     </div>

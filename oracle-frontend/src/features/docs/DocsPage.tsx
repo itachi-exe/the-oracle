@@ -64,10 +64,10 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-[110px] border-b border-line-2 py-14 first:pt-0">
+    <section id={id} className="scroll-mt-[110px] border-b border-line-2 py-10 first:pt-0 sm:py-14">
       <div className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-ink-7">{label}</div>
-      <h2 className="m-0 mb-5 text-[28px] font-normal leading-[1.15] tracking-[-0.02em] text-ink-1">{title}</h2>
-      <div className="flex flex-col gap-4 text-[15px] leading-[1.65] text-ink-4">{children}</div>
+      <h2 className="m-0 mb-5 text-[22px] font-normal leading-[1.2] tracking-[-0.01em] text-ink-1 sm:text-[28px] sm:leading-[1.15] sm:tracking-[-0.02em]">{title}</h2>
+      <div className="flex flex-col gap-4 text-[14.5px] leading-[1.6] text-ink-4 sm:text-[15px] sm:leading-[1.65]">{children}</div>
     </section>
   );
 }
@@ -77,7 +77,7 @@ export function DocsPage() {
     <div className="min-h-screen bg-canvas font-sans text-ink-1 antialiased">
       <LandingHeader />
 
-      <div className="mx-auto flex max-w-[1180px] gap-16 px-6 py-16">
+      <div className="mx-auto flex max-w-[1180px] gap-16 px-4 py-10 sm:px-6 sm:py-16 lg:py-16">
         <nav className="sticky top-[130px] hidden h-fit w-[200px] shrink-0 flex-col gap-1 lg:flex">
           {toc.map((item) => (
             <a
@@ -91,14 +91,26 @@ export function DocsPage() {
         </nav>
 
         <main className="min-w-0 flex-1">
-          <div className="mb-10 font-mono text-xs uppercase tracking-[0.12em] text-ink-7">Docs</div>
-          <h1 className="m-0 mb-3 text-[44px] font-normal leading-[1.08] tracking-[-0.03em] text-ink-1">
+          <div className="mb-6 font-mono text-xs uppercase tracking-[0.12em] text-ink-7 sm:mb-10">Docs</div>
+          <h1 className="m-0 mb-3 text-[30px] font-normal leading-[1.12] tracking-[-0.02em] text-ink-1 sm:text-[44px] sm:leading-[1.08] sm:tracking-[-0.03em]">
             How The Oracle works
           </h1>
-          <p className="m-0 mb-16 max-w-[620px] text-base leading-[1.6] text-ink-5">
+          <p className="m-0 mb-8 max-w-[620px] text-[15px] leading-[1.6] text-ink-5 sm:mb-12 sm:text-base lg:mb-16">
             Own an AI agent that argues with you before every prediction, locks your calls on-chain forever, and
             climbs one shared reputation with you, starting at a coin flip.
           </p>
+
+          <nav className="mb-10 flex gap-1.5 overflow-x-auto pb-1 lg:hidden">
+            {toc.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="shrink-0 whitespace-nowrap rounded-md border border-line-4 px-3 py-1.5 text-[12.5px] text-ink-4 no-underline"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
 
           <Section id="overview" label="Overview" title="An agent you own, not one you share">
             <p>

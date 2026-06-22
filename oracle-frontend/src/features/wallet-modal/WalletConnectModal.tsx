@@ -28,7 +28,7 @@ export function WalletConnectModal() {
   return (
     <div className="fixed inset-0 z-50 bg-black/65" onClick={closeModal}>
       <div
-        className="absolute left-0 right-0 top-16 mx-auto max-w-[1180px] border-b border-line-3 bg-panel-2 px-6 pb-6 pt-5 shadow-2xl"
+        className="absolute left-0 right-0 top-[57px] mx-auto max-w-[1180px] border-b border-line-3 bg-panel-2 px-4 pb-5 pt-4 shadow-2xl sm:top-16 sm:px-6 sm:pb-6 sm:pt-5"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-4 flex items-center justify-between">

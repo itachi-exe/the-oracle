@@ -52,33 +52,38 @@ export function PredictionsPage() {
   }
 
   return (
-    <div className="flex flex-col gap-2.5 p-7">
+    <div className="flex flex-col gap-2.5 p-4 sm:p-7">
       {predictions.data.map((p) => {
         const style = statusStyle[p.status];
         const Icon = style.icon;
         return (
-          <div key={p.id} className="flex items-center gap-4 rounded-[11px] border border-line-3 bg-panel px-5 py-4">
+          <div
+            key={p.id}
+            className="flex flex-wrap items-center gap-3 rounded-[11px] border border-line-3 bg-panel px-4 py-3.5 sm:gap-4 sm:px-5 sm:py-4"
+          >
             <span className={`flex size-[34px] shrink-0 items-center justify-center rounded-[9px] text-white ${style.dot}`}>
               <Icon className="size-4" aria-hidden="true" />
             </span>
-            <div className="min-w-0 flex-1">
-              <div className="text-[14.5px] text-ink-2">{p.question}</div>
-              <div className="font-mono text-xs text-ink-7">
+            <div className="min-w-0 flex-1 basis-[160px]">
+              <div className="text-[14px] text-ink-2 sm:text-[14.5px]">{p.question}</div>
+              <div className="font-mono text-[11px] text-ink-7 sm:text-xs">
                 Locked: {p.outcome} · {formatDate(p.lockedAt)}
                 {p.userOverrodeAgent && (
                   <span className="ml-2 text-ink-6">(agent had {p.agentOutcome})</span>
                 )}
               </div>
             </div>
-            {p.userOverrodeAgent && (
-              <span
-                className="rounded-full border border-line-7 bg-panel-2 px-2.5 py-0.5 font-mono text-[10.5px] text-ink-3"
-                title="You overrode your agent's read on this call"
-              >
-                OVERRIDE
-              </span>
-            )}
-            <span className={`rounded-full border px-3 py-1 font-mono text-[11.5px] ${style.pill}`}>{style.label}</span>
+            <div className="ml-[46px] flex items-center gap-2 sm:ml-0">
+              {p.userOverrodeAgent && (
+                <span
+                  className="rounded-full border border-line-7 bg-panel-2 px-2.5 py-0.5 font-mono text-[10.5px] text-ink-3"
+                  title="You overrode your agent's read on this call"
+                >
+                  OVERRIDE
+                </span>
+              )}
+              <span className={`rounded-full border px-3 py-1 font-mono text-[11.5px] ${style.pill}`}>{style.label}</span>
+            </div>
           </div>
         );
       })}

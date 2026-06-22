@@ -4,9 +4,9 @@ export function FinalCTA() {
   const openModal = useWalletStore((s) => s.openModal);
 
   return (
-    <section className="relative mx-auto max-w-[1180px] px-6 py-[130px] text-center">
-      <img src="/oracle-logo.png" alt="" className="relative mx-auto mb-6.5 block size-16 object-contain" />
-      <h2 className="relative m-0 mb-7 text-[58px] font-normal leading-[1.05] tracking-[-0.035em] text-ink-1">
+    <section className="relative mx-auto max-w-[1180px] px-4 py-[80px] text-center sm:px-6 sm:py-[130px]">
+      <img src="/oracle-logo.png" alt="" className="relative mx-auto mb-6.5 block size-14 object-contain sm:size-16" />
+      <h2 className="relative m-0 mb-7 text-[34px] font-normal leading-[1.1] tracking-[-0.02em] text-ink-1 sm:text-[46px] sm:leading-[1.07] md:text-[58px] md:leading-[1.05] md:tracking-[-0.035em]">
         Trust your read.
         <br />
         <span className="font-serif italic text-ink-5">Prove it forever.</span>
