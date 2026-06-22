@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./oracle-frontend/src/*"]
+    }
+  },
+  "references": [
+    { "path": "./oracle-frontend/tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.backend.json" }
+  ]
+}
