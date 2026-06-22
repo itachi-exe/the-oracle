@@ -179,6 +179,20 @@ export function AppNavBar() {
           </div>
         </header>
 
+        {/* Mobile-only: 0G Chain + agent status, shown inline in Frame 1 at sm+, so they need their own row here instead of disappearing. Still inside the sticky wrapper. */}
+        <div className="flex items-center justify-between gap-2 border-b border-line-2 bg-app-canvas px-4 py-2 sm:hidden">
+          <span className="inline-flex items-center gap-1 rounded-full border border-success-border bg-success-bg px-2.5 py-0.5 font-mono text-[10.5px] text-success">
+            ● 0G Chain
+          </span>
+          <div className="flex items-center gap-1.5 rounded-md border border-line-4 px-2 py-1">
+            <IdentityAvatar seed={address} size={16} />
+            <span className="font-mono text-[11px] text-ink-2">{agent.data?.agent?.name ?? "…"}</span>
+            {agent.data?.agent && (
+              <span className="font-mono text-[11px] text-ink-6">{Math.round(agent.data.agent.pairReputation * 100)}%</span>
+            )}
+          </div>
+        </div>
+
         {/* Frame 2: primary nav — squared, bordered cards, same treatment as the wallet picker. Desktop only; mobile uses the bottom tab bar below. */}
         <nav className="hidden h-[60px] flex-wrap items-center justify-center gap-2.5 border-b border-line-2 bg-panel-2 px-6 md:flex">
           <SparNavItem />
